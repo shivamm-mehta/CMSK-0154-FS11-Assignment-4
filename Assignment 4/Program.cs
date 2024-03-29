@@ -1,4 +1,4 @@
-﻿namespace TicketingApp
+﻿namespace BookTicket
 {
     public enum SeatPref
     {
@@ -53,6 +53,7 @@
     class Program
     {
         static List<Row> Chart = new List<Row>();
+        const string dataFilePath = "D:\\MacEwan\\Intoduction to C# (Assignment)\\Assignment 4\\Assignment 4\\data.txt";
 
         static void Main(string[] args)
         {
@@ -99,8 +100,17 @@
             Console.WriteLine("Please enter the passenger's first name:");
             string fName = Console.ReadLine();
 
-            Console.WriteLine("Please enter the passenger's last name:");
-            string lName = Console.ReadLine();
+            string lName;
+            do
+            {
+                Console.WriteLine("Please enter the passenger's last name:");
+                lName = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(lName))
+                {
+                    Console.WriteLine("Error: Please enter the last name.");
+                }
+            } while (string.IsNullOrWhiteSpace(lName));
 
             Console.WriteLine("Please enter 1 for a Window seat preference, 2 for an Aisle seat preference, or hit enter to pick the first available seat:");
             string prefInput = Console.ReadLine();
@@ -128,6 +138,8 @@
                 seat.Occupant = p;
                 p.BookedSeat = seat;
                 Console.WriteLine($"The seat located in {seat.Label} has been booked.");
+
+                SavePassengerToFile(p);
             }
             else
             {
@@ -157,8 +169,18 @@
             return null;
         }
 
+        static void SavePassengerToFile(Passenger p)
+        {
+            using (StreamWriter writer = File.AppendText(dataFilePath))
+            {
+                writer.WriteLine($"{p.FirstName},{p.LastName},{p.BookedSeat.Label}");
+            }
+        }
+
         static void DisplayChart()
         {
+            ReadPassengersFromFile();
+
             foreach (Row row in Chart)
             {
                 foreach (Seat seat in row.Seats)
@@ -174,6 +196,47 @@
                 }
                 Console.WriteLine();
             }
+        }
+
+        static void ReadPassengersFromFile()
+
+        {
+            if (!File.Exists(dataFilePath))
+                return;
+
+            string[] lines = File.ReadAllLines(dataFilePath);
+
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split(',');
+                string firstName = parts[0];
+                string lastName = parts[1];
+                string seatLabel = parts[2];
+
+                Seat seat = FindSeatByLabel(seatLabel);
+                if (seat != null)
+                {
+                    Passenger passenger = new Passenger(firstName, lastName, SeatPref.Window);
+                    seat.IsBooked = true;
+                    seat.Occupant = passenger;
+                    passenger.BookedSeat = seat;
+                }
+            }
+        }
+
+        static Seat FindSeatByLabel(string label)
+        {
+            foreach (Row row in Chart)
+            {
+                foreach (Seat seat in row.Seats)
+                {
+                    if (seat.Label == label)
+                    {
+                        return seat;
+                    }
+                }
+            }
+            return null;
         }
     }
 }

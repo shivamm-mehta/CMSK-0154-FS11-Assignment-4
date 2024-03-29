@@ -12,3 +12,4 @@ D:\MacEwan\Intoduction to C# (Assignment)\Assignment 4\Assignment 4\obj\Debug\ne
 D:\MacEwan\Intoduction to C# (Assignment)\Assignment 4\Assignment 4\obj\Debug\net8.0\Assignment 4.pdb
 D:\MacEwan\Intoduction to C# (Assignment)\Assignment 4\Assignment 4\obj\Debug\net8.0\Assignment 4.genruntimeconfig.cache
 D:\MacEwan\Intoduction to C# (Assignment)\Assignment 4\Assignment 4\obj\Debug\net8.0\ref\Assignment 4.dll
+D:\MacEwan\Intoduction to C# (Assignment)\Assignment 4\Assignment 4\obj\Debug\net8.0\Assignment 4.sourcelink.json

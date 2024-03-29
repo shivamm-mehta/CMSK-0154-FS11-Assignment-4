@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{01287F92-27AB-40B1-ABF2-0BBF82B3CEB1}|Assignment 4\\Assignment 4.csproj|d:\\macewan\\intoduction to c# (assignment)\\assignment 4\\assignment 4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01287F92-27AB-40B1-ABF2-0BBF82B3CEB1}|Assignment 4\\Assignment 4.csproj|solutionrelative:assignment 4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01287F92-27AB-40B1-ABF2-0BBF82B3CEB1}|Assignment 4\\Assignment 4.csproj|d:\\macewan\\intoduction to c# (assignment)\\assignment 4\\assignment 4\\data.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{01287F92-27AB-40B1-ABF2-0BBF82B3CEB1}|Assignment 4\\Assignment 4.csproj|solutionrelative:assignment 4\\data.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "data.txt",
+              "DocumentMoniker": "D:\\MacEwan\\Intoduction to C# (Assignment)\\Assignment 4\\Assignment 4\\data.txt",
+              "RelativeDocumentMoniker": "Assignment 4\\data.txt",
+              "ToolTip": "D:\\MacEwan\\Intoduction to C# (Assignment)\\Assignment 4\\Assignment 4\\data.txt",
+              "RelativeToolTip": "Assignment 4\\data.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-03-29T00:59:12.049Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Assignment 4\\Program.cs",
               "ToolTip": "D:\\MacEwan\\Intoduction to C# (Assignment)\\Assignment 4\\Assignment 4\\Program.cs",
               "RelativeToolTip": "Assignment 4\\Program.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAmwLMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-28T22:45:33.667Z",
               "EditorCaption": ""
